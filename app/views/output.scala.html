@@ -1,0 +1,8 @@
+@import model.User
+
+@(user: String)(implicit request: RequestHeader, flash: Flash)
+@flash.get("success").getOrElse("Welcome!")
+@main("output") {
+<h1> Hello @flash</h1>
+<h1>Welcome @user</h1>
+}
